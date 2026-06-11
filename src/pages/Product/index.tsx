@@ -5,6 +5,8 @@ import Section from '../../components/Section'
 
 import Gallery from '../../components/Gallery'
 
+import residentEvil from '../../assets/images/resident.png'
+
 const Product = () => {
   const { id } = useParams()
 
@@ -27,17 +29,17 @@ const Product = () => {
       </Section>
       <Section title="Mais detalhes" background="gray">
         <p>
-          Plataforma: PlayStation 5 <br />
-          Desenvolvedor: Avalanche Software <br />
-          Editora: Portkey Games, subsidiária da Warner Bros. Interactive
+          <b>Plataforma:</b> PlayStation 5 <br />
+          <b>Desenvolvedor:</b> Avalanche Software <br />
+          <b>Editora:</b> Portkey Games, subsidiária da Warner Bros. Interactive
           Entertainment <br />
-          Idiomas: O jogo oferece suporte a diversos idiomas, incluindo inglês,
-          espanhol, francês, alemão, italiano, português, entre outros. As
-          opções de áudio e legendas podem ser ajustadas nas configurações do
+          <b>Idiomas:</b> O jogo oferece suporte a diversos idiomas, incluindo
+          inglês, espanhol, francês, alemão, italiano, português, entre outros.
+          As opções de áudio e legendas podem ser ajustadas nas configurações do
           jogo.
         </p>
       </Section>
-      <Gallery />
+      <Gallery name="Jogo teste" defaultCover={residentEvil} />
     </>
   )
 }
