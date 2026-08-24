@@ -136,6 +136,7 @@ const Checkout = () => {
   useEffect(() => {
     const calcInstallments = () => {
       const installmentsArray: Installments[] = []
+
       for (let i = 1; i <= 6; i++) {
         installmentsArray.push({
           quantity: i,
@@ -412,10 +413,10 @@ const Checkout = () => {
                             checkInputHasError('installments') ? 'error' : ''
                           }
                         >
-                          {installments.map((installments) => (
-                            <option key={installments.quantity}>
-                              {installments.amount}x de{' '}
-                              {installments.formattedAmount}
+                          {installments.map((installment) => (
+                            <option key={installment.quantity}>
+                              {installment.quantity}x de{' '}
+                              {installment.formattedAmount}
                             </option>
                           ))}
                         </select>
